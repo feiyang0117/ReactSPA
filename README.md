@@ -1,4 +1,5 @@
-# React_SPA
-react+antd 
-# 初始化npm
-1. npm init 
+
+官网示例
+1.npx create-react-app my-app
+2.cd my-app
+3.npm start
