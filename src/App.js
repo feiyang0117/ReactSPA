@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import Nav from './component/nav';
-import Welcome from './page/welcome';
+import Home from './page/home';
 import Goods from './page/goods';
 import {Route} from 'react-router-dom';
 
-import './App.css';
 const LIST = [{
-  text: 'welcome',
-  url: '/welcome'
+  text: 'home',
+  url: '/home'
 }, {
   text: 'goods',
   url: '/goods'
@@ -16,11 +15,11 @@ class App extends Component {
   render() {
       return (
           <div className="App">
-              <div className="nav_bar">
+              {/* <div className="nav_bar">
                   <Nav list={LIST} />
-              </div>
+              </div> */}
               <div className="conent">
-                  <Route path='/welcome' component={Welcome} />
+                  <Route path='/home' component={Home} />
                   <Route path='/goods' component={Goods} />
               </div>
           </div>
