@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
-
+import {connect} from 'react-redux';
+import * as actions from '../action/good';
+console.log(actions.getGoods())
 class Goods extends Component {
+    componentDidMount() {
+        let dispatch = this.props.dispatch;
+        dispatch(actions.getGoods());
+    }
     render() {
-        return (
+        return this.props.isFetching ? (<h1>Loading…</h1>) : (
             <ul className="goods">
                 {
-                    this.props.list.map((ele, idx) => (
+                    this.props.goods.map((ele, idx) => (
                         <li key={idx} style={{marginBottom: 20, listStyle: 'none'}}>
                             <span>{ele.name}</span> | 
                             <span>￥ {ele.price}</span> | 
@@ -18,4 +24,9 @@ class Goods extends Component {
     }
 }
 
-export default Goods;
+const mapStateToProps = (state, ownProps) => ({
+    isFetching: state.goods.isFetching,
+    goods: state.goods.data
+});
+
+export default connect(mapStateToProps)(Goods);

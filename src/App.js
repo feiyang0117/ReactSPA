@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import Nav from './component/nav';
 import Welcome from './page/welcome';
 import Goods from './page/goods';
+import {Route} from 'react-router-dom';
 
 import './App.css';
 const LIST = [{
@@ -12,21 +12,6 @@ const LIST = [{
   text: 'goods',
   url: '/goods'
 }];
-
-const GOODS = [{
-  name: 'iPhone 7',
-  price: '6,888',
-  amount: 37
-}, {
-  name: 'iPad',
-  price: '3,488',
-  amount: 82
-}, {
-  name: 'MacBook Pro',
-  price: '11,888',
-  amount: 15
-}];
-
 class App extends Component {
   render() {
       return (
@@ -35,8 +20,8 @@ class App extends Component {
                   <Nav list={LIST} />
               </div>
               <div className="conent">
-                  <Welcome />
-                  <Goods list={GOODS} />
+                  <Route path='/welcome' component={Welcome} />
+                  <Route path='/goods' component={Goods} />
               </div>
           </div>
       );
