@@ -15,7 +15,7 @@ class VideoItem extends Component{
 　　　　　   <div className="nav">
                 {/* 第{this.props.classItem}节课！ */}
                 <Player>
-                    <source src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" />
+                    <source src="https://ksv-video-publish.cdn.bcebos.com/4f8dafafb9e6f666dbf89f9d3b946486a5c8e358.mp4?auth_key=1555883794-0-0-b3dfec7d7767d267a3878b022de7a297" />
                 </Player>
             </div>
 　　　  )
