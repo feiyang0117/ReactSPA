@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../action/good';
-console.log(actions.getGoods())
 class Goods extends Component {
     componentDidMount() {
         let dispatch = this.props.dispatch;
