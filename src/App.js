@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Nav from './component/nav';
 import Home from './page/home';
 import Goods from './page/goods';
+import Regist from './page/regist';
 import {Route} from 'react-router-dom';
 
 const LIST = [{
@@ -21,6 +22,7 @@ class App extends Component {
               <div className="conent">
                   <Route path='/home' component={Home} />
                   <Route path='/goods' component={Goods} />
+                  <Route path='/regist' component={Regist} />
               </div>
           </div>
       );
